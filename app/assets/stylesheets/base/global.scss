@@ -26,3 +26,29 @@ font-size: 22px;
 p.navbar-text {
     text-align:right;
 }
+
+div.show {
+    text-align:center;
+    border:1px solid black;
+    border-radius:1.5em;
+    width: 30%;
+    background-color:azure;
+    top:50%;
+    left:50%;
+    margin:auto;
+
+}
+
+div.nav {
+    text-align:center;
+    margin-top:10px;
+    font-size:20px;
+}
+
+div.form {
+    text-align:center;
+}
+
+div {
+    padding: 5px;
+}

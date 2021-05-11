@@ -1,66 +1,69 @@
 <h1>New Entry</h1>
-
+<div class="form">
 <h3> Please log the following information </h3>
 
-<%= form_with model: @entry do |form| %>
-  <div>
-    <%= form.label :current_weight %><br>
-    <%= form.number_field :current_weight, step: 0.01 %>
-    <% @entry.errors.full_messages_for(:current_weight).each do |message| %>
+
+  <%= form_with model: @entry do |form| %>
+    <div>
+      <%= form.label :current_weight %><br>
+      <%= form.number_field :current_weight, step: 0.01 %>
+      <% @entry.errors.full_messages_for(:current_weight).each do |message| %>
+          <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div>
+      <%= form.label :meal_type %><br>
+      <%= form.select :meal_type, ['Snack', 'Breakfast', 'Lunch', 'Dinner'], selected: 'Snack' %>
+      <% @entry.errors.full_messages_for(:meal_type).each do |message| %>
         <div><%= message %></div>
-    <% end %>
-  </div>
-
-  <div>
-    <%= form.label :meal_type %><br>
-    <%= form.select :meal_type, ['Snack', 'Breakfast', 'Lunch', 'Dinner'], selected: 'Snack' %>
-    <% @entry.errors.full_messages_for(:meal_type).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
-
-    <div>
-        <%= form.label :calories %><br>
-        <%= form.number_field :calories %>
-        <% @entry.errors.full_messages_for(:calories).each do |message| %>
-          <div><%= message %></div>
-        <% end %>
+      <% end %>
     </div>
 
-    <div>
-        <%= form.label :carbohydrates %><br>
-        <%= form.number_field :carbohydrates %>
-        <% @entry.errors.full_messages_for(:carbohydrates).each do |message| %>
-          <div><%= message %></div>
-        <% end %>
-    </div>
+      <div>
+          <%= form.label :calories %><br>
+          <%= form.number_field :calories %>
+          <% @entry.errors.full_messages_for(:calories).each do |message| %>
+            <div><%= message %></div>
+          <% end %>
+      </div>
 
-    <div>
-        <%= form.label :fats %><br>
-        <%= form.number_field :fats %>
-        <% @entry.errors.full_messages_for(:fats).each do |message| %>
-          <div><%= message %></div>
-        <% end %>
-    </div>
+      <div>
+          <%= form.label :carbohydrates %><br>
+          <%= form.number_field :carbohydrates %>
+          <% @entry.errors.full_messages_for(:carbohydrates).each do |message| %>
+            <div><%= message %></div>
+          <% end %>
+      </div>
 
-    <div>
-        <%= form.label :proteins %><br>
-        <%= form.number_field :proteins %>
-        <% @entry.errors.full_messages_for(:proteins).each do |message| %>
-          <div><%= message %></div>
-        <% end %>
-    </div>
+      <div>
+          <%= form.label :fats %><br>
+          <%= form.number_field :fats %>
+          <% @entry.errors.full_messages_for(:fats).each do |message| %>
+            <div><%= message %></div>
+          <% end %>
+      </div>
 
+      <div>
+          <%= form.label :proteins %><br>
+          <%= form.number_field :proteins %>
+          <% @entry.errors.full_messages_for(:proteins).each do |message| %>
+            <div><%= message %></div>
+          <% end %>
+      </div>
+
+      <div>
+          <%= form.label :current_date %><br>
+          <%= form.date_field :current_date %>
+          <% @entry.errors.full_messages_for(:current_date).each do |message| %>
+            <div><%= message %></div>
+          <% end %>
+      </div>  
     <div>
-        <%= form.label :current_date %><br>
-        <%= form.date_field :current_date %>
-        <% @entry.errors.full_messages_for(:current_date).each do |message| %>
-          <div><%= message %></div>
-        <% end %>
-    </div>  
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
-<br>
-<%= link_to "Back", index_path %>
+      <br>
+      <%= form.submit %>
+    </div>
+  <% end %>
+  <br>
+  <%= link_to "Back", index_path %>
+</div>
