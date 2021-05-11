@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  current_weight: 1.5
+  meal_type: MyString
+  calories: 1
+  carbohydrates: 1
+  fats: 1
+  proteins: 1
+  current_date: 2021-05-11
+
+two:
+  current_weight: 1.5
+  meal_type: MyString
+  calories: 1
+  carbohydrates: 1
+  fats: 1
+  proteins: 1
+  current_date: 2021-05-11

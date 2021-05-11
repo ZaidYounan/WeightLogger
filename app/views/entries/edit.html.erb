@@ -1,0 +1,48 @@
+<h1>Edit Entry</h1>
+
+<h3> Please log the following information </h3>
+
+<%= form_with model: @entry do |form| %>
+  <div>
+    <%= form.label :current_weight %><br>
+    <%= form.number_field :current_weight, step: 0.001 %>
+    <% @entry.errors.full_messages_for(:current_weight).each do |message| %>
+        <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :meal_type %><br>
+    <%= form.select :meal_type, ['N/A', 'Breakfast', 'Lunch', 'Dinner'], selected: 'N/A' %>
+  </div>
+
+    <div>
+        <%= form.label :calories %><br>
+        <%= form.number_field :calories %>
+    </div>
+
+    <div>
+        <%= form.label :carbohydrates %><br>
+        <%= form.number_field :carbohydrates %>
+    </div>
+
+    <div>
+        <%= form.label :fats %><br>
+        <%= form.number_field :fats %>
+    </div>
+
+    <div>
+        <%= form.label :proteins %><br>
+        <%= form.number_field :proteins %>
+    </div>
+
+    <div>
+        <%= form.label :current_date %><br>
+        <%= form.date_field :current_date %>
+    </div>  
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+<br>
+<%= link_to "Back", index_path %>

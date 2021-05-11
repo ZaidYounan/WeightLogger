@@ -1,0 +1,13 @@
+<h1> <%= @entry.meal_type %> - <%= @entry.current_date %> </h1>
+
+<h3>Current weight: <%= @entry.current_weight %> kg</h3>
+<h3>Calories: <%= @entry.calories %> calories</h3>
+<h3>Carbohydrates: <%= @entry.carbohydrates %> grams</h3>
+<h3>Fats: <%= @entry.fats%> grams</h3>
+<h3>Proteins: <%= @entry.proteins %> grams</h3>
+
+<%= link_to "Go back", index_path %>
+<%= link_to "Edit", edit_entry_path %>
+<%= link_to "Destroy", entry_path(@entry),
+                  method: :delete,
+                  data: { confirm: "Are you sure you want to delete this entry?" } %>
