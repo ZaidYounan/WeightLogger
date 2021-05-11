@@ -1,11 +1,11 @@
 <h1>Welcome to WeightLogger </h1>
     <ul>
         <% current_user.entries.each do |entry| %>
-            <li>
-                    <%= link_to entry.current_date, entry %>
-                    <%= link_to entry.meal_type, entry %>
-            </li>
+            <div class="entries">
+                <%= link_to entry.meal_type, entry %>
+                <%= link_to entry.current_date, entry %>
+            </div>
         <% end %>    
     </ul>
     
-<%= link_to "Enter New Entry", new_entry_path %>
+<h2><%= link_to "Enter New Entry", new_entry_path %></h2>
