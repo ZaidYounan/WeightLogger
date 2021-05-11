@@ -15,7 +15,10 @@ h2 {
     top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    border: solid black 1px;
+    border-radius: 1em;
+    padding:10px;
+    background-color: azure;
 }
 
 div.entries {
@@ -63,5 +66,13 @@ div.actions {
 }
 
 div.shared-link {
+    text-align:center;
+}
+
+p.alert-danger {
+    text-align:center;
+}
+
+p.alert-success {
     text-align:center;
 }
