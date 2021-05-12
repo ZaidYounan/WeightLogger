@@ -42,6 +42,12 @@ div.show {
 
 }
 
+@media screen and (max-width: 600px) {
+    div.show {
+        width: 45%;
+    }
+}
+
 div.nav {
     text-align:center;
     margin-top:10px;
@@ -63,6 +69,10 @@ div.field {
 
 div.actions {
     text-align:center;
+}
+
+h2.button:hover {
+    padding:15px;
 }
 
 div.shared-link {
