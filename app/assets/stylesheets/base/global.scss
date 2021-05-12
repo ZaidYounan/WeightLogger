@@ -48,6 +48,10 @@ div.show {
     }
 }
 
+ul {
+    padding:0;
+}
+
 div.nav {
     text-align:center;
     margin-top:10px;
@@ -76,6 +80,16 @@ h2.button:hover {
 }
 
 div.shared-link {
+    text-align:center;
+}
+
+div.error {
+    display:inline-block;
+    text-align:center;
+    border-bottom: solid black 1px;
+}
+
+div#error_explanation {
     text-align:center;
 }
 
