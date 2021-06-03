@@ -29,9 +29,9 @@ class EntriesController < ApplicationController
         @entry = Entry.find(params[:id])
         if @entry.update(entry_params)
             redirect_to @entry
-          else
-            render :show
-          end
+        else
+        render :show
+        end
     end
 
     def destroy
